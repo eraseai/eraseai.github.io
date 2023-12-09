@@ -72,7 +72,7 @@
         </h3>
         <h5><sup>1</sup>Tsinghua University, <sup>2</sup>SwanHub.co,<sup>3</sup>Xidian University, 
            <sup>4</sup>The University of Sydney</h5>
-        <div class="flex-center"><strong style="font-size: 1.35rem;padding-right: 20px; color: #B509AC;">Unknown</strong><iframe src="https://ghbtns.com/github-btn.html?user=linghaoChan&repo=HumanMAC&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe></div>
+        <div class="flex-center"><strong style="font-size: 1.35rem;padding-right: 20px; color: #B509AC;">Comming soon</strong><iframe src="https://ghbtns.com/github-btn.html?user=eraseai&repo=erase&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe></div>
         <!-- <div class="publications project-links">
           <a href="https://arxiv.org/abs/2302.03665" class="btn" role="button" target="_blank"
             rel="noopener noreferrer">arXiv</a> -->
@@ -151,8 +151,6 @@
           <div class="list-group list-group-horizontal" style="max-width:600px">
             <a class="list-group-item list-group-item-action active" id="Cora-list" data-toggle="list" href="#Cora"
               role="tab" aria-controls="Cora" style="text-align: center;">Cora</a>
-            <a class="list-group-item list-group-item-action" id="CiteSeer-list" data-toggle="list" href="#CiteSeer"
-              role="tab" aria-controls="CiteSeer" style="text-align: center;">CiteSeer</a>
             <a class="list-group-item list-group-item-action" id="PubMed-list" data-toggle="list" href="#PubMed"
               role="tab" aria-controls="PubMed" style="text-align: center;">PubMed</a>
           </div>
@@ -239,188 +237,9 @@
         </div>
       </div>
 
-      <!---------------------------- CONTROLLABLE MOTION PREDICTION ---------------------------->
-      <div style="margin-top:50px; padding: 0px !important">
-        <h3 style="text-align: center; margin-bottom:20px">Examples of Part-body Controllable Prediction
-        </h3>
-        <div class="tab-content figure" id="nav-tabContent" style="padding: 0px !important">
-          <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
-            style="padding: 0px !important">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-              <div class="dropdown list-group">
-                <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="selection">fix_torso</span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
-                  <a class="dropdown-item dropdown-item-action" href="#fix_torso" id="h36m-dropdown" data-toggle="list"
-                    role="tab" aria-controls="fix_torso">fix_torso</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_right_arm" id="h36m-dropdown"
-                    data-toggle="list" role="tab" aria-controls="fix_right_arm">fix_right_arm</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_right_leg" id="h36m-dropdown"
-                    data-toggle="list" role="tab" aria-controls="fix_right_leg">fix_right_leg</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_left_leg" id="h36m-dropdown"
-                    data-toggle="list" role="tab" aria-controls="fix_left_leg">fix_left_leg</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_left_arm" id="h36m-dropdown"
-                    data-toggle="list" role="tab" aria-controls="fix_left_arm">fix_left_arm</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_lower" id="h36m-dropdown" data-toggle="list"
-                    role="tab" aria-controls="fix_lower">fix_lower</a>
-                  <a class="dropdown-item dropdown-item-action" href="#fix_upper" id="h36m-dropdown" data-toggle="list"
-                    role="tab" aria-controls="fix_upper">fix_upper</a>
-                </div>
-              </div>
-            </div>
-            <p style="text-align: center;">
-              <b><i>Note:</i></b> The first column is the observation frame and the second column is the ground truth
-              that provides fixed part of the body.
-            </p>
-            <div class="card" style="padding: 10px !important; margin-top:10px">
-              <div class="tab-content figure" id="nav-tabContent">
-                <div class="tab-pane fade show active gif" id="fix_torso" role="tabpanel">
-                  <img class="gif" src="./assets/img/control/torso.gif" style='width:100%'>
-                  <p style="margin: 10px;">We fix the 4 joints at the
-                    torso
-                    and can see that the predicted results are biased towards determinism, with only slight variations
-                    in
-                    the arms and legs.
-                    This is consistent with the forward dynamics of the human skeleton.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_right_arm" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/right_arm.gif" style='width:100%'>
-                  <p style="margin: 10px;">When fixing the right arm, we can observe that the torso is clearly affected
-                    by the fixation of the
-                    right arm, and likewise
-                    the
-                    rest of the body.
-                    This makes some of the predictions distorted, but most of them are still valid.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_right_leg" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/right_leg.gif" style='width:100%'>
-                  <p style="margin: 10px;">When fixing the left leg, we see
-                    that the predicted results become diverse.
-                    An interesting phenomenon is that the response of the right leg naturally aligns with the left leg,
-                    despite controlling only the left leg.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_left_leg" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/left_leg.gif" style='width:100%'>
-                  <p style="margin: 10px;">The case of the fixing left leg is
-                    similar to fixing the right leg,
-                    where the predicted motion still becomes diverse within the context constraint.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_left_arm" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/left_arm.gif" style='width:100%'>
-                  <p style="margin: 10px;">Fixing the left arm is the same as
-                    when fixing the right arm.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_lower" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/fix_lower.gif" style='width:100%'>
-                  <p style="margin: 10px;">When fixing the entire lower body,
-                    the upper body still produces diverse predictions.
-                    action.</p>
-                </div>
-                <div class="tab-pane fade" id="fix_upper" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/control/fix_upper.gif" style='width:100%'>
-                  <p style="margin: 10px;">When fixing the entire upper body,
-                    the prediction becomes deterministic.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      
 
-    <div style="margin-top:50px; padding: 0px !important">
-      <h3 style="text-align: center; margin-bottom:20px">Examples of Motion Switch Ability
-      </h3>
-      <div class="tab-content figure" id="nav-tabContent" style="padding: 0px !important">
-        <div class="tab-pane fade show active" id="h36m" role="tabpanel" aria-labelledby="h36m-list"
-          style="padding: 0px !important">
-          <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="dropdown list-group">
-              <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="h36m-btn"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="selection">switch_eg_1</span>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_1" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_1">switch_eg_1</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_2" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_2">switch_eg_2</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_3" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_3">switch_eg_3</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_4" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_4">switch_eg_4</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_5" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_5">switch_eg_5</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_6" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_6">switch_eg_6</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_7" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_7">switch_eg_7</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_8" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_8">switch_eg_8</a>
-                <a class="dropdown-item dropdown-item-action" href="#switch_eg_9" id="h36m-dropdown" data-toggle="list"
-                  role="tab" aria-controls="switch_eg_9">switch_eg_9</a>
-              </div>
-            </div>
-          </div>
-          <div class="card" style="padding: 10px !important; margin-top:10px">
-            <div class="tab-content figure" id="nav-tabContent">
-              <div class="tab-pane fade show active gif" id="switch_eg_1" role="tabpanel">
-                <img class="gif" src="./assets/img/transfer/transfer_1.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_2" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_2.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_3" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_3.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_4" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_4.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_5" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_5.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_6" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_6.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_7" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_7.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_8" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_8.gif" style='width:100%'>
-              </div>
-              <div class="tab-pane fade" id="switch_eg_9" role="tabpanel">
-                <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                  data-src="./assets/img/transfer/transfer_9.gif" style='width:100%'>
-              </div>
-              <p style="text-align: justify; margin: 10px;">We provide more examples of motion switch. The red-black
-                skeleton
-                represents the source motion. The
-                orange-blue skeleton constitutes the target motion. Once the switch starts, the skeleton colors
-                change to purple and green.
-                We can see that most of the switchs are very natural and smooth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="h-100 d-flex align-items-center justify-content-center" style="margin-top: 30px">
+    <!-- <div class="h-100 d-flex align-items-center justify-content-center" style="margin-top: 30px">
       <div class="project-narrow" id="bibtex" style="text-align: justify;">
         <h3 style="text-align: center;">Citation</h3>
         <div class="bibtex">
@@ -432,7 +251,7 @@
 <span class="na">journal</span><span class="p">=</span><span class="s">{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}</span><span class="p">,</span>
 <span class="na">year</span><span class="p">=</span><span class="s">{2023}</span>
 <span class="p">}</span></code></pre>
-          </figure>
+          </figure> -->
 
 
         </div>
