@@ -151,8 +151,8 @@
           <div class="list-group list-group-horizontal" style="max-width:600px">
             <a class="list-group-item list-group-item-action active" id="Cora-list" data-toggle="list" href="#Cora"
               role="tab" aria-controls="Cora" style="text-align: center;">Cora</a>
-            <a class="list-group-item list-group-item-action" id="PubMed-list" data-toggle="list" href="#PubMed"
-              role="tab" aria-controls="PubMed" style="text-align: center;">PubMed</a>
+            <a class="list-group-item list-group-item-action" id="pubmed-list" data-toggle="list" href="#pubmed"
+              role="tab" aria-controls="pubmed" style="text-align: center;">PubMed</a>
           </div>
         </div>
         <div class="tab-content figure" id="nav-tabContent" style="padding: 0px !important">
@@ -189,47 +189,35 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="humaneva" role="tabpanel" aria-labelledby="humaneva-list"
+
+          <div class="tab-pane fade" id="pubmed" role="tabpanel" aria-labelledby="pubmed-list"
             style="padding: 0px !important">
             <div class="h-100 d-flex align-items-center justify-content-center">
               <div class="dropdown list-group">
-                <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="humaneva-btn"
+                <button class="btn dropdown-toggle" style="max-width:600px" type="button" id="pubmed-btn"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="selection">Box</span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="list-tab" role="tablist">
-                  <a class="dropdown-item dropdown-item-action" href="#eva_Box" id="humaneva-dropdown"
-                    data-toggle="list" role="tab" aria-controls="eva_Box">Box</a>
-                  <a class="dropdown-item dropdown-item-action" href="#Gestures" id="humaneva-dropdown"
-                    data-toggle="list" role="tab" aria-controls="Gestures">Gestures</a>
-                  <a class="dropdown-item dropdown-item-action" href="#Jog" id="humaneva-dropdown" data-toggle="list"
-                    role="tab" aria-controls="Jog">Jog</a>
-                  <a class="dropdown-item dropdown-item-action" href="#ThrowCatch" id="humaneva-dropdown"
-                    data-toggle="list" role="tab" aria-controls="ThrowCatch">ThrowCatch</a>
-                  <a class="dropdown-item dropdown-item-action" href="#Walking-eva" id="humaneva-dropdown"
-                    data-toggle="list" role="tab" aria-controls="Walking-eva">Walking</a>
+                  <a class="dropdown-item dropdown-item-action" href="#pubmed-cosine-similarity" id="pubmed-dropdown"
+                    data-toggle="list" role="tab" aria-controls="pubmed-cosine-similarity">Cosine Similarity</a>
+                  <a class="dropdown-item dropdown-item-action" href="#pubmed-pca" id="pubmed-dropdown"
+                    data-toggle="list" role="tab" aria-controls="pubmed-pca">PCA</a>
+                  <a class="dropdown-item dropdown-item-action" href="#pubmed-tsne" id="pubmed-dropdown"
+                    data-toggle="list" role="tab" aria-controls="pubmed-tsne">t-SNE</a>
                 </div>
               </div>
             </div>
             <div class="card" style="padding: 10px !important; margin-top:10px">
               <div class="tab-content figure" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="eva_Box" role="tabpanel">
-                  <img class="gif" src="./assets/img/motion/pred_Box.gif" style='width:100%'>
+                <div class="tab-pane fade show active" id="pubmed-cosine-similarity" role="tabpanel">
+                  <img class="gif" src="./assets/img/motion/PubMed/cos.gif" style='width:100%'>
                 </div>
-                <div class="tab-pane fade" id="Gestures" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/motion/pred_Gestures.gif" style='width:100%'>
+                <div class="tab-pane fade" id="pubmed-pca" role="tabpanel">
+                <img class="gif lazy" src="./assets/img/motion/PubMed/pca.gif" style='width:100%'>
                 </div>
-                <div class="tab-pane fade" id="Jog" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/motion/pred_Jog.gif" style='width:100%'>
-                </div>
-                <div class="tab-pane fade" id="ThrowCatch" role="tabpanel">
-                  <img class="gif lazy" src="./assets/img/transfer/placeholder_comparison.png"
-                    data-src="./assets/img/motion/pred_ThrowCatch.gif" style='width:100%'>
-                </div>
-                <div class="tab-pane fade" id="Walking-eva" role="tabpanel">
-                  <img class="gif" src="./assets/img/motion/pred_Walking_eva.gif" style='width:100%'>
+                <div class="tab-pane fade" id="pubmed-tsne" role="tabpanel">
+                  <img class="gif lazy" src="./assets/img/motion/PubMed/tsne.png">
                 </div>
               </div>
             </div>
